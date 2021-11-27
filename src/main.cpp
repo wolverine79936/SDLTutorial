@@ -8,6 +8,8 @@ Game* g_game = 0;
 SDL_Window* g_pWindow = 0;
 SDL_Renderer* g_pRenderer = 0;
 
+static const char* version = "v0.0.1";
+
 bool Game::init(const char* title, int xpos, int ypos, int width, int height, bool fullscreen)
 {
     int flags = 0;
@@ -109,7 +111,7 @@ int main(int argc, char* argv[])
 {
      g_game = new Game();
 
-     g_game->init("Monk's Quest", 100, 100, 640, 480, false);
+     g_game->init("SDL Tutorial v0.0.1", 100, 100, 640, 480, false);
 
     while(g_game->running())
     {
