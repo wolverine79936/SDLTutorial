@@ -34,7 +34,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
             if(m_pRenderer != 0) // renderer init success
             {
                 std::cout << "renderer creation success\n";
-                SDL_SetRenderDrawColor(m_pRenderer,255,255,255,255);
+                SDL_SetRenderDrawColor(m_pRenderer,0,0,0,255);
             }
             else
             {
@@ -77,7 +77,7 @@ void Game::render()
 {
     SDL_RenderClear(m_pRenderer); // clear the renderer to the draw color
 
-    SDL_RenderCopy(m_pRenderer, m_pTexture, &m_sourceRectangle, &m_destinationRectangle);
+    SDL_RenderCopy(m_pRenderer, m_pTexture, 0, 0);
 
     SDL_RenderPresent(m_pRenderer); // draw to the screen
 }
